@@ -1,0 +1,43 @@
+<style>
+    table {
+        border-style: solid; width:400px;
+    }
+    tr {
+        width: 100%;
+    }
+    .widget {
+        width: 80%;
+    }
+    .label {
+        width:20%;
+    }
+
+</style>
+<body>
+<table>
+    <tr>
+        <td class="label">{{ form_label(form.title) }}</td>
+        <td class="widget">{{ form_widget(form.title) }}</td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.status) }}</td>
+        <td class="widget">{{ form_widget(form.status) }}</td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.value) }}</td>
+        <td class="widget">{{ form_widget(form.value) }}</td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.user) }}</td>
+        <td class="widget">{{ form_widget(form.user) }}</td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.exchange) }}</td>
+        <td class="widget">{{ form_widget(form.exchange) }}</td>
+    </tr>
+    <tr>
+        <td class="widget" colspan="2">{{ form_widget(form) }}</td>
+    </tr>
+</table>
+</body>
+
