@@ -1,7 +1,50 @@
 easy_admin:
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Product
-        - App\Entity\Exchange
-        - App\Entity\User
-        - App\Entity\Notification
+        # - App\Entity\Product
+        # - App\Entity\Exchange
+        # - App\Entity\User
+        # - App\Entity\Notification
+        
+        Product:
+            class: App\Entity\Product
+            # ...
+            list:
+                fields:
+                    - id
+                    - title
+                    - status
+                    - value
+                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - category
+                    - user
+                    - exchange
+            # ...
+            show:
+                fields:
+                    - id
+                    - title
+                    - status
+                    - value
+                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - category
+                    - user
+                    - exchange
+            form:
+                fields:
+                    - title
+                    - status
+                    - value
+                    - { property: 'imageFile', type: 'vich_image' }
+                    - category
+                    - user
+                    - exchange
+
+        Exchange:
+            class: App\Entity\Exchange
+        
+        User:
+            class: App\Entity\User
+        
+        Notification:
+            class: App\Entity\Notification

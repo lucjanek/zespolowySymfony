@@ -7,6 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
+use Vich\UploaderBundle\Form\Type\VichFileType;
+
 class ProductEdit extends AbstractController
 {
     /**
@@ -24,6 +26,7 @@ class ProductEdit extends AbstractController
             ->add('title', null, ['attr' => ['style' => 'width: 300px']])
             ->add('status', null, ['attr' => ['style' => 'width: 300px']])
             ->add('value', null, ['attr' => ['style' => 'width: 300px']])
+            ->add('imageFile', VichFileType::class)
             ->add('user', null, ['attr' => ['style' => 'width: 300px']])
             ->add('exchange', null, ['attr' => ['style' => 'width: 300px']])
             ->add('save', SubmitType::class, ['label' => 'Zapisz zmiany', 'attr' => ['style' => 'width: 350px']])

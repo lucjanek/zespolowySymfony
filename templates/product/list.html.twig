@@ -1,9 +1,9 @@
 <body>
 <h1>Products</h1>
 <table border="1">
-    <tr><td>id</td><td>title</td><td>status</td><td>value</td><td>user</td><td>exchange</td></tr></b>
+    <tr><td>id</td><td>title</td><td>status</td><td>value</td><td>image</td><td>user</td><td>exchange</td></tr></b>
     {% for p in product %}
-        <tr><td>{{ p.id }}</td><td>{{ p.title }}</td><td>{{ p.status }}</td><td>{{ p.value }}</td><td> {{p.user}} </td><td>{{ p.exchange }}</td></tr>
+        <tr><td>{{ p.id }}</td><td>{{ p.title }}</td><td>{{ p.status }}</td><td>{{ p.value }}</td><td><img src="{{ vich_uploader_asset(p, 'imageFile') }}" height = "40"></td><td> {{p.user}} </td><td>{{ p.exchange }}</td></tr>
     {% endfor %}
 </table>
 </body>
