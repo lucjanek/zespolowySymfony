@@ -51,3 +51,16 @@ php bin/console server:run
 W przeglądarce otwieramy: <strong>zespolowy.localhost</strong>
 
 Baza danych z encjami dostępna: <strong>zespolowy.localhost/phpmyadmin</strong>
+
+---------
+
+VichUploaderBundle - instrukcja
+
+w katalogu projektu w consoli
+```
+composer require vich/uploader-bundle
+```
+aktualizacja bazy danych (zmiana typu pola image z array na string i dodanie pola updatedAt(wymaga tego VichUploaderBundle))
+```
+php bin/console doctrine:schema:update --force
+```
